@@ -1,1 +1,1 @@
-# SpaceORM is a open source ORM with its own query language.
+# SpaceORM is an open source ORM with its own query language.
