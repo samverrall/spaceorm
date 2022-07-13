@@ -106,6 +106,17 @@ func (l *Lexer) Consume() token.Token {
 		}
 
 		return l.newToken(token.String, lexeme)
+	case isPunc(next):
+		switch next {
+		case '|':
+			return l.newToken(token.Or, "|")
+		case '>':
+			return l.newToken(token.Greater, ">")
+		case '<':
+			return l.newToken(token.Less, "<")
+		case '=':
+			return l.newToken(token.Equal, "=")
+		}
 	}
 
 	lexeme, err := l.readWhile(notWhitespace)
@@ -202,4 +213,12 @@ func isString(r rune) bool {
 
 func isEOF(r rune) bool {
 	return r == eof
+}
+
+func isPunc(r rune) bool {
+	switch r {
+	case '|', '>', '<', '=':
+		return true
+	}
+	return false
 }
