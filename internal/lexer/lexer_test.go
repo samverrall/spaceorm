@@ -24,6 +24,9 @@ func TestLexer(t *testing.T) {
 		{"single quote string", "'Hello, World!'", token.Token{Kind: token.String, Lexeme: "Hello, World!"}},
 		{"simple indentifier", "foo", token.Token{Kind: token.Ident, Lexeme: "foo"}},
 		{"identifier with leading whitespace", "     foo", token.Token{Kind: token.Ident, Lexeme: "foo"}},
+		{"or operator", "|", token.Token{Kind: token.Or, Lexeme: "|"}},
+		{"greater operator", ">", token.Token{Kind: token.Greater, Lexeme: ">"}},
+		{"equal operator", "=", token.Token{Kind: token.Equal, Lexeme: "="}},
 	}
 	for _, tc := range tt {
 		tc := tc

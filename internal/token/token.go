@@ -10,6 +10,12 @@ const (
 	Float
 	String
 	Ident
+
+	// Operators
+	Or
+	Greater
+	Less
+	Equal
 )
 
 type Token struct {
@@ -41,6 +47,18 @@ func (k Kind) String() string {
 
 	case Ident:
 		return "ident"
+
+	case Or:
+		return "or"
+
+	case Greater:
+		return "greater"
+
+	case Less:
+		return "less"
+
+	case Equal:
+		return "equal"
 
 	default:
 		return "unknown"
