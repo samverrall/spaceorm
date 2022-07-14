@@ -125,6 +125,12 @@ func (l *Lexer) Consume() token.Token {
 		case '=':
 			return l.newToken(token.Equal, lexeme)
 
+		case ',':
+			return l.newToken(token.Comma, lexeme)
+
+		case '&':
+			return l.newToken(token.And, lexeme)
+
 		default:
 			return l.newError(fmt.Errorf("unexpected punc: %s", lexeme))
 
@@ -229,7 +235,7 @@ func isEOF(r rune) bool {
 
 func isPunc(r rune) bool {
 	switch r {
-	case '|', '>', '<', '=':
+	case '|', '>', '<', '=', ',', '&':
 		return true
 	}
 	return false
