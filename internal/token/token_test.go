@@ -25,6 +25,11 @@ func TestTokenKinds(t *testing.T) {
 		{"greater token", token.Greater, "greater"},
 		{"less token", token.Less, "less"},
 		{"equal token", token.Equal, "equal"},
+		{"where token", token.Where, "where"},
+		{"in token", token.In, "in"},
+		{"like token", token.Like, "like"},
+		{"not token", token.Not, "not"},
+		{"nil token", token.Nil, "nil"},
 	}
 	for _, tc := range tt {
 		tc := tc

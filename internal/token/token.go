@@ -16,6 +16,13 @@ const (
 	Greater
 	Less
 	Equal
+
+	// Keywords
+	Where
+	In
+	Like
+	Not
+	Nil
 )
 
 type Token struct {
@@ -59,6 +66,21 @@ func (k Kind) String() string {
 
 	case Equal:
 		return "equal"
+
+	case Where:
+		return "where"
+
+	case In:
+		return "in"
+
+	case Like:
+		return "like"
+
+	case Not:
+		return "not"
+
+	case Nil:
+		return "nil"
 
 	default:
 		return "unknown"
