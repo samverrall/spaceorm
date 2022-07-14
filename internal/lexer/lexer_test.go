@@ -28,6 +28,8 @@ func TestLexer(t *testing.T) {
 		{"greater operator", ">", token.Token{Kind: token.Greater, Lexeme: ">"}},
 		{"less operator", "<", token.Token{Kind: token.Less, Lexeme: "<"}},
 		{"equal operator", "=", token.Token{Kind: token.Equal, Lexeme: "="}},
+		{"comma operator", ",", token.Token{Kind: token.Comma, Lexeme: ","}},
+		{"and operator", "&", token.Token{Kind: token.And, Lexeme: "&"}},
 	}
 	for _, tc := range tt {
 		tc := tc

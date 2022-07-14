@@ -16,6 +16,8 @@ const (
 	Greater
 	Less
 	Equal
+	Comma
+	And
 
 	// Keywords
 	Where
@@ -66,6 +68,12 @@ func (k Kind) String() string {
 
 	case Equal:
 		return "equal"
+
+	case Comma:
+		return "comma"
+
+	case And:
+		return "and"
 
 	case Where:
 		return "where"
