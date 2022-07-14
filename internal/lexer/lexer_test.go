@@ -26,6 +26,7 @@ func TestLexer(t *testing.T) {
 		{"identifier with leading whitespace", "     foo", token.Token{Kind: token.Ident, Lexeme: "foo"}},
 		{"or operator", "|", token.Token{Kind: token.Or, Lexeme: "|"}},
 		{"greater operator", ">", token.Token{Kind: token.Greater, Lexeme: ">"}},
+		{"less operator", "<", token.Token{Kind: token.Less, Lexeme: "<"}},
 		{"equal operator", "=", token.Token{Kind: token.Equal, Lexeme: "="}},
 	}
 	for _, tc := range tt {
@@ -36,6 +37,10 @@ func TestLexer(t *testing.T) {
 
 			if got := l.Consume(); got != tc.want {
 				t.Errorf("want %v, got %v", tc.want, got)
+			}
+
+			if want, got := token.EOF, l.Consume().Kind; got != want {
+				t.Errorf("want %v, got %v", want, got)
 			}
 		})
 	}
