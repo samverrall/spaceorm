@@ -107,15 +107,27 @@ func (l *Lexer) Consume() token.Token {
 
 		return l.newToken(token.String, lexeme)
 	case isPunc(next):
+		if _, err := l.read(); err != nil {
+			return l.newError(err)
+		}
+
+		lexeme := string(next)
 		switch next {
 		case '|':
-			return l.newToken(token.Or, "|")
+			return l.newToken(token.Or, lexeme)
+
 		case '>':
-			return l.newToken(token.Greater, ">")
+			return l.newToken(token.Greater, lexeme)
+
 		case '<':
-			return l.newToken(token.Less, "<")
+			return l.newToken(token.Less, lexeme)
+
 		case '=':
-			return l.newToken(token.Equal, "=")
+			return l.newToken(token.Equal, lexeme)
+
+		default:
+			return l.newError(fmt.Errorf("unexpected punc: %s", lexeme))
+
 		}
 	}
 
