@@ -22,6 +22,7 @@ func TestLexer(t *testing.T) {
 		{"integer", "123", token.Token{Kind: token.Int, Lexeme: "123"}},
 		{"float", "123.456", token.Token{Kind: token.Float, Lexeme: "123.456"}},
 		{"single quote string", "'Hello, World!'", token.Token{Kind: token.String, Lexeme: "Hello, World!"}},
+		{"double quote string", "\"Hello, World!\"", token.Token{Kind: token.String, Lexeme: "Hello, World!"}},
 		{"simple indentifier", "foo", token.Token{Kind: token.Ident, Lexeme: "foo"}},
 		{"identifier with leading whitespace", "     foo", token.Token{Kind: token.Ident, Lexeme: "foo"}},
 		{"where indentifier", "where", token.Token{Kind: token.Where, Lexeme: "where"}},

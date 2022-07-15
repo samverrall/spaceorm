@@ -208,7 +208,7 @@ func isIdent(r rune) bool {
 }
 
 func isString(r rune) bool {
-	return r == '\''
+	return r == '\'' || r == '"'
 }
 
 func isEOF(r rune) bool {
