@@ -18,6 +18,8 @@ const (
 	Equal
 	Comma
 	And
+	Question
+	BangEqual
 
 	// Keywords
 	Where
@@ -71,6 +73,12 @@ func (k Kind) String() string {
 
 	case Comma:
 		return "comma"
+
+	case Question:
+		return "question"
+
+	case BangEqual:
+		return "bangequal"
 
 	case And:
 		return "and"

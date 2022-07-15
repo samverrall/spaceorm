@@ -15,7 +15,6 @@ func TestTokenKinds(t *testing.T) {
 		{"unknown token", token.Unknown, "unknown"},
 		{"error token", token.Error, "error"},
 		{"eof token", token.EOF, "eof"},
-
 		{"bool token", token.Bool, "bool"},
 		{"int token", token.Int, "int"},
 		{"float token", token.Float, "float"},
@@ -26,6 +25,8 @@ func TestTokenKinds(t *testing.T) {
 		{"less token", token.Less, "less"},
 		{"equal token", token.Equal, "equal"},
 		{"comma token", token.Comma, "comma"},
+		{"question token", token.Question, "question"},
+		{"bangequal token", token.BangEqual, "bangequal"},
 		{"and token", token.And, "and"},
 		{"where token", token.Where, "where"},
 		{"in token", token.In, "in"},

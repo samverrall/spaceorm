@@ -29,12 +29,12 @@ func TestLexer(t *testing.T) {
 		{"like indentifier", "like", token.Token{Kind: token.Like, Lexeme: "like"}},
 		{"not indentifier", "not", token.Token{Kind: token.Not, Lexeme: "not"}},
 		{"in indentifier", "in", token.Token{Kind: token.In, Lexeme: "in"}},
-		{"or operator", "|", token.Token{Kind: token.Or, Lexeme: "|"}},
+		{"or operator", "||", token.Token{Kind: token.Or, Lexeme: "||"}},
 		{"greater operator", ">", token.Token{Kind: token.Greater, Lexeme: ">"}},
 		{"less operator", "<", token.Token{Kind: token.Less, Lexeme: "<"}},
 		{"equal operator", "=", token.Token{Kind: token.Equal, Lexeme: "="}},
 		{"comma operator", ",", token.Token{Kind: token.Comma, Lexeme: ","}},
-		{"and operator", "&", token.Token{Kind: token.And, Lexeme: "&"}},
+		{"and operator", "&&", token.Token{Kind: token.And, Lexeme: "&&"}},
 	}
 	for _, tc := range tt {
 		tc := tc
