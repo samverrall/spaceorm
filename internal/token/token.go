@@ -20,6 +20,8 @@ const (
 	And
 	Question
 	BangEqual
+	GreaterEqual
+	LessEqual
 
 	// Keywords
 	Where
@@ -79,6 +81,12 @@ func (k Kind) String() string {
 
 	case BangEqual:
 		return "bangequal"
+
+	case GreaterEqual:
+		return "greaterequal"
+
+	case LessEqual:
+		return "lessequal"
 
 	case And:
 		return "and"
