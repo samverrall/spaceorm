@@ -83,8 +83,8 @@ func (l *Lexer) Consume() token.Token {
 			return l.newError(err)
 		}
 
-		if lexeme == "true" || lexeme == "false" {
-			return l.newToken(token.Bool, lexeme)
+		if kind, ok := keywords[lexeme]; ok {
+			return l.newToken(kind, lexeme)
 		}
 
 		return l.newToken(token.Ident, lexeme)
