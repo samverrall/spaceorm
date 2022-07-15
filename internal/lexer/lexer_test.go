@@ -32,6 +32,8 @@ func TestLexer(t *testing.T) {
 		{"or operator", "||", token.Token{Kind: token.Or, Lexeme: "||"}},
 		{"greater operator", ">", token.Token{Kind: token.Greater, Lexeme: ">"}},
 		{"less operator", "<", token.Token{Kind: token.Less, Lexeme: "<"}},
+		{"greaterequal operator", ">=", token.Token{Kind: token.GreaterEqual, Lexeme: ">="}},
+		{"lessequal operator", "<=", token.Token{Kind: token.LessEqual, Lexeme: "<="}},
 		{"equal operator", "=", token.Token{Kind: token.Equal, Lexeme: "="}},
 		{"comma operator", ",", token.Token{Kind: token.Comma, Lexeme: ","}},
 		{"and operator", "&&", token.Token{Kind: token.And, Lexeme: "&&"}},

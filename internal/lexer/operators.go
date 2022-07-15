@@ -11,4 +11,6 @@ var operators = map[string]token.Kind{
 	",":  token.Comma,
 	"?":  token.Question,
 	"!=": token.BangEqual,
+	">=": token.GreaterEqual,
+	"<=": token.LessEqual,
 }

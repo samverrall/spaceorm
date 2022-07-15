@@ -27,6 +27,8 @@ func TestTokenKinds(t *testing.T) {
 		{"comma token", token.Comma, "comma"},
 		{"question token", token.Question, "question"},
 		{"bangequal token", token.BangEqual, "bangequal"},
+		{"greaterequal token", token.GreaterEqual, "greaterequal"},
+		{"lessequal token", token.LessEqual, "lessequal"},
 		{"and token", token.And, "and"},
 		{"where token", token.Where, "where"},
 		{"in token", token.In, "in"},
