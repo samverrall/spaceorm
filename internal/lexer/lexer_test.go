@@ -23,13 +23,13 @@ func TestLexer(t *testing.T) {
 		{"float", "123.456", token.Token{Kind: token.Float, Lexeme: "123.456"}},
 		{"single quote string", "'Hello, World!'", token.Token{Kind: token.String, Lexeme: "Hello, World!"}},
 		{"double quote string", "\"Hello, World!\"", token.Token{Kind: token.String, Lexeme: "Hello, World!"}},
-		{"simple indentifier", "foo", token.Token{Kind: token.Ident, Lexeme: "foo"}},
+		{"simple identifier", "foo", token.Token{Kind: token.Ident, Lexeme: "foo"}},
 		{"identifier with leading whitespace", "     foo", token.Token{Kind: token.Ident, Lexeme: "foo"}},
-		{"where indentifier", "where", token.Token{Kind: token.Where, Lexeme: "where"}},
-		{"nil indentifier", "nil", token.Token{Kind: token.Nil, Lexeme: "nil"}},
-		{"like indentifier", "like", token.Token{Kind: token.Like, Lexeme: "like"}},
-		{"not indentifier", "not", token.Token{Kind: token.Not, Lexeme: "not"}},
-		{"in indentifier", "in", token.Token{Kind: token.In, Lexeme: "in"}},
+		{"where keyword", "where", token.Token{Kind: token.Where, Lexeme: "where"}},
+		{"nil keyword", "nil", token.Token{Kind: token.Nil, Lexeme: "nil"}},
+		{"like keyword", "like", token.Token{Kind: token.Like, Lexeme: "like"}},
+		{"not keyword", "not", token.Token{Kind: token.Not, Lexeme: "not"}},
+		{"in keyword", "in", token.Token{Kind: token.In, Lexeme: "in"}},
 		{"or operator", "||", token.Token{Kind: token.Or, Lexeme: "||"}},
 		{"greater operator", ">", token.Token{Kind: token.Greater, Lexeme: ">"}},
 		{"less operator", "<", token.Token{Kind: token.Less, Lexeme: "<"}},
@@ -38,6 +38,8 @@ func TestLexer(t *testing.T) {
 		{"equal operator", "=", token.Token{Kind: token.Equal, Lexeme: "="}},
 		{"comma operator", ",", token.Token{Kind: token.Comma, Lexeme: ","}},
 		{"and operator", "&&", token.Token{Kind: token.And, Lexeme: "&&"}},
+		{"question operator", "?", token.Token{Kind: token.Question, Lexeme: "?"}},
+		{"bangequal operator", "!=", token.Token{Kind: token.BangEqual, Lexeme: "!="}},
 	}
 	for _, tc := range tt {
 		tc := tc
