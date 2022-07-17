@@ -22,6 +22,12 @@ const (
 	BangEqual
 	GreaterEqual
 	LessEqual
+	Hyphen
+	Fullstop
+	ParenthesisLeft
+	ParenthesisRight
+	BracketLeft
+	BracketRight
 
 	// Keywords
 	Where
@@ -87,6 +93,24 @@ func (k Kind) String() string {
 
 	case LessEqual:
 		return "lessequal"
+
+	case Hyphen:
+		return "hyphen"
+
+	case Fullstop:
+		return "fullstop"
+
+	case BracketLeft:
+		return "bracketleft"
+
+	case BracketRight:
+		return "bracketright"
+
+	case ParenthesisLeft:
+		return "parenthesisleft"
+
+	case ParenthesisRight:
+		return "parenthesisright"
 
 	case And:
 		return "and"
