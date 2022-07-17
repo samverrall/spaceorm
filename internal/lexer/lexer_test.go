@@ -40,6 +40,12 @@ func TestLexer(t *testing.T) {
 		{"and operator", "&&", token.Token{Kind: token.And, Lexeme: "&&"}},
 		{"question operator", "?", token.Token{Kind: token.Question, Lexeme: "?"}},
 		{"bangequal operator", "!=", token.Token{Kind: token.BangEqual, Lexeme: "!="}},
+		{"bracketleft operator", "[", token.Token{Kind: token.BracketLeft, Lexeme: "["}},
+		{"bracketright operator", "]", token.Token{Kind: token.BracketRight, Lexeme: "]"}},
+		{"hyphen operator", "-", token.Token{Kind: token.Hyphen, Lexeme: "-"}},
+		{"fullstop operator", ".", token.Token{Kind: token.Fullstop, Lexeme: "."}},
+		{"parenthesisleft operator", "(", token.Token{Kind: token.ParenthesisLeft, Lexeme: "("}},
+		{"parenthesisright operator", ")", token.Token{Kind: token.ParenthesisRight, Lexeme: ")"}},
 	}
 	for _, tc := range tt {
 		tc := tc

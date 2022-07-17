@@ -217,7 +217,7 @@ func isEOF(r rune) bool {
 
 func isPunc(r rune) bool {
 	switch r {
-	case '|', '>', '<', '=', ',', '&', '?', '!':
+	case '|', '>', '<', '=', ',', '&', '?', '!', '-', '[', ']', '(', ')', '.':
 		return true
 	}
 	return false
