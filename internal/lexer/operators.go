@@ -13,4 +13,10 @@ var operators = map[string]token.Kind{
 	"!=": token.BangEqual,
 	">=": token.GreaterEqual,
 	"<=": token.LessEqual,
+	"(":  token.ParenthesisLeft,
+	")":  token.ParenthesisRight,
+	"[":  token.BracketLeft,
+	"]":  token.BracketRight,
+	".":  token.Fullstop,
+	"-":  token.Hyphen,
 }
