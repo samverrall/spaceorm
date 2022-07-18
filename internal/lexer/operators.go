@@ -17,6 +17,6 @@ var operators = map[string]token.Kind{
 	")":  token.ParenthesisRight,
 	"[":  token.BracketLeft,
 	"]":  token.BracketRight,
-	".":  token.Fullstop,
-	"-":  token.Hyphen,
+	".":  token.Dot,
+	"-":  token.Minus,
 }
