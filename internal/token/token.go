@@ -22,8 +22,8 @@ const (
 	BangEqual
 	GreaterEqual
 	LessEqual
-	Hyphen
-	Fullstop
+	Minus
+	Dot
 	ParenthesisLeft
 	ParenthesisRight
 	BracketLeft
@@ -94,11 +94,11 @@ func (k Kind) String() string {
 	case LessEqual:
 		return "lessequal"
 
-	case Hyphen:
-		return "hyphen"
+	case Minus:
+		return "minus"
 
-	case Fullstop:
-		return "fullstop"
+	case Dot:
+		return "dot"
 
 	case BracketLeft:
 		return "bracketleft"

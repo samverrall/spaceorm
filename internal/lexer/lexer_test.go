@@ -42,8 +42,8 @@ func TestLexer(t *testing.T) {
 		{"bangequal operator", "!=", token.Token{Kind: token.BangEqual, Lexeme: "!="}},
 		{"bracketleft operator", "[", token.Token{Kind: token.BracketLeft, Lexeme: "["}},
 		{"bracketright operator", "]", token.Token{Kind: token.BracketRight, Lexeme: "]"}},
-		{"hyphen operator", "-", token.Token{Kind: token.Hyphen, Lexeme: "-"}},
-		{"fullstop operator", ".", token.Token{Kind: token.Fullstop, Lexeme: "."}},
+		{"minus operator", "-", token.Token{Kind: token.Minus, Lexeme: "-"}},
+		{"dot operator", ".", token.Token{Kind: token.Dot, Lexeme: "."}},
 		{"parenthesisleft operator", "(", token.Token{Kind: token.ParenthesisLeft, Lexeme: "("}},
 		{"parenthesisright operator", ")", token.Token{Kind: token.ParenthesisRight, Lexeme: ")"}},
 	}
